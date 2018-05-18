@@ -1,4 +1,12 @@
 # hackerrank30daysC
 
-Day 4 is Class vs. Instance
-where C does not use class
+Not applicable to C
+
+Day 4 - Class vs. Instance
+
+Day 12 - Inheratance
+
+Day 13 - Abstract Classes
+
+Day 14 - Scope
+
