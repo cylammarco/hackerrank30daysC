@@ -8,28 +8,29 @@ typedef struct Node
 
 Node* insert(Node *head,int data)
 {
-  Node *p = (Node*)malloc(sizeof(Node));
-  p->data = data;
-  p->next=NULL;   
-  
-  if(head==NULL){
-   head=p;  
-  
-  }
-  else if(head->next==NULL)
-  {
-      head->next=p;
-      
-  }
-  else{
-  Node *start=head;
-  while(start->next!=NULL)
-    start=start->next;
-  
-  start->next=p;   
-  
-  }
-      return head;
+    Node *new_node = (Node*) malloc(sizeof(Node));
+    
+    new_node->data = data;
+    new_node->next = NULL;
+    
+    if (head == NULL)
+    {
+        head = new_node;
+    }
+    else if (head->next == NULL)
+    {
+        head->next = new_node;
+    }
+    else
+    {   
+        Node *new_tail = head;
+        while (new_tail->next != NULL)
+        {
+            new_tail = new_tail->next;
+        }
+        new_tail->next = new_node;
+    }
+    return head;
 }
 
 void display(Node *head)
